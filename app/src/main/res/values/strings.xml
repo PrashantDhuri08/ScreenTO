@@ -1,0 +1,20 @@
+<resources>
+    <string name="app_name">ScreenTO[PDroid08]</string> <!-- Or your app's name -->
+
+    <!-- Tile Labels -->
+    <string name="tile_label">QSscreenTO</string> <!-- Label shown on the active tile -->
+    <string name="tile_label_add">Screen Timeout</string> <!-- Label shown when adding the tile -->
+
+    <!-- Timeout Strings -->
+    <string name="timeout_never">Never</string>
+    <string name="unit_seconds">s</string>
+    <string name="unit_minutes">m</string>
+    <string name="timeout_set_to">Timeout set to %s</string> <!-- %s will be replaced by the value -->
+
+    <!-- Permission Strings -->
+    <string name="permission_needed">Tap/Hold to Grant Permission</string>
+    <string name="grant_write_settings_prompt">Please grant Write Settings permission to change screen timeout.</string>
+    <string name="error_setting_timeout">Error: Could not set screen timeout.</string>
+    <string name="error_opening_settings">Error: Could not open settings.</string>
+
+</resources>

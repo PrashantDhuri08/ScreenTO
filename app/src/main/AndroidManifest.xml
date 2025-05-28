@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    package="com.example.screento"> <!-- Make sure this matches your package -->
+
+    <!-- Required permission to modify system settings like screen timeout -->
+    <uses-permission android:name="android.permission.WRITE_SETTINGS"
+        tools:ignore="ProtectedPermissions" /> <!-- Lint suppression for special permission -->
+
+    <application
+        android:allowBackup="true"
+        android:icon="@mipmap/pdroid"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/pdroid"
+        android:supportsRtl="true"> <!-- Adjust theme if needed -->
+
+        <!-- Declare the TileService -->
+        <service
+            android:name=".ScreenTimeoutTileService"
+            android:exported="true"
+            android:icon="@drawable/ic_tile_timeout_on"
+        android:label="@string/tile_label_add"
+        android:permission="android.permission.BIND_QUICK_SETTINGS_TILE">
+        <intent-filter>
+            <action android:name="android.service.quicksettings.action.QS_TILE" />
+        </intent-filter>
+        <!-- Optional: Keep tile updated even when panel isn't fully expanded -->
+        <meta-data
+            android:name="android.service.quicksettings.ACTIVE_TILE"
+            android:value="true" />
+
+        </service>
+    </application>
+
+
+
+</manifest>
+
